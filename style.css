@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;700&family=Montserrat:wght@400;700&family=Mulish:wght@200;400;600;700&family=Poppins:wght@400;700&family=Roboto+Mono&display=swap");
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  height: 100vh;
+  transition: all 1s ease;
+}
+
+#modeButton {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  background: black;
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 7.5px 10px;
+  border-radius: 5px;
+}
+
+#clockContainer {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+#clock {
+  position: relative;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#originDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  border: 2px solid rgb(232, 76, 59);
+  background-color: black;
+  z-index: 2;
+}
+
+#secondHand {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+
+  height: 100px;
+  width: 3px;
+  background-color: rgb(232, 76, 59);
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: bottom center;
+  z-index: 1;
+  transition: transform 1s;
+}
+
+#minuteHand {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  height: 100px;
+  width: 3px;
+  background-color: black;
+  transform: translate(-50%, -50%) rotate(135deg);
+  transform-origin: bottom center;
+  transition: transform 1s;
+}
+
+#hourHand {
+  position: absolute;
+  top: 33.75%;
+
+  left: 50%;
+  height: 65px;
+  width: 3px;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 1s;
+}
+
+#time {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  transform: translate(-50%, -50%);
+  font-family: "Heebo", sans-serif;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+#date {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  font-family: "Heebo", sans-serif;
+  font-size: 14px;
+  color: rgb(170, 170, 170);
+}
+
+#dateNumber {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  padding: 1px;
+
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
